@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>TEST convert</h1>
+
+<p>{{from_symbol}}{{convert_amount}} {{convert_from}} to {{convert_to}} = {{to_symbol}}{{converted}}</p>
+<a href="/"><button>Home</button></a>
+<ul>
+{% for rate in rates %}
+<li>{{rate}} {{rates[rate]|round(2)}}</li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}
+

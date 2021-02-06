@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/convert">
+  <input type="text" name="from" id="convertfrom" placeholder="Convert From">
+  <input type="text" name="to" id="convertto" placeholder="Convert To">
+  <input type="text" name="amount" id="convertamount" placeholder="Convert Amount">
+  <button>Convert</button>
+</form>
+
+{% for msg in get_flashed_messages() %}
+<p>{{msg}}</p>
+{% endfor %}
+
+{% endblock %}
