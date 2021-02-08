@@ -35,7 +35,9 @@ currency_code_dict = {
 
 
 def sort_dict(test_dict):
+    """Sort dictionary alphabetically"""
     sorted_dict = {}
     for k, v in sorted(test_dict.items()):
         sorted_dict[k] = v
     return sorted_dict
+

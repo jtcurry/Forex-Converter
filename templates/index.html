@@ -14,12 +14,14 @@
 
 <div id="converterdiv">
   <form action="/convert">
-    <input type="text" name="from" id="convertfrom" placeholder="Convert From">
-    <input type="text" name="to" id="convertto" placeholder="Convert To">
-    <input type="text" name="amount" id="convertamount" placeholder="Convert Amount">
+    <label for="from">Convert From</label>
+    <input type="text" name="from" id="convertfrom" placeholder="Enter Code" required>
+    <label for="to">Convert To</label>
+    <input type="text" name="to" id="convertto" placeholder="Enter Code" required>
+    <label for="amount">Amount</label>
+    <input type="text" name="amount" id="convertamount" placeholder="0.00" required>
     <button>Convert</button>
   </form>
-
 </div>
 
 <div id="errordiv">
