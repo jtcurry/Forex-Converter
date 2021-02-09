@@ -5,7 +5,8 @@
 
 
 <div id="codesdiv">
-  <ul>
+  <h3>Select Currency</h3>
+  <ul id="codelist">
     {% for code in codes %}
     <li>{{code}} {{codes[code]}}</li>
     {% endfor %}
@@ -14,12 +15,21 @@
 
 <div id="converterdiv">
   <form action="/convert">
-    <label for="from">Convert From</label>
-    <input type="text" name="from" id="convertfrom" placeholder="Enter Code" required>
-    <label for="to">Convert To</label>
-    <input type="text" name="to" id="convertto" placeholder="Enter Code" required>
-    <label for="amount">Amount</label>
-    <input type="text" name="amount" id="convertamount" placeholder="0.00" required>
+    <h2>Convert Currency</h2>
+    <div class="input-container">
+      <label for="from">Convert From</label>
+      <input type="text" name="from" id="convertfrom" placeholder="Enter Code" required>
+      <i class="far fa-trash-alt"></i>
+    </div>
+    <div class="input-container">
+      <label for="to">Convert To</label>
+      <input type="text" name="to" id="convertto" placeholder="Enter Code" required>
+      <i class="far fa-trash-alt"></i>
+    </div>
+    <div class="input-container">
+      <label for="amount">Amount</label>
+      <input type="text" name="amount" id="convertamount" placeholder="0.00" required>
+    </div>
     <button>Convert</button>
   </form>
 </div>

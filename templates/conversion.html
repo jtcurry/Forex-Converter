@@ -4,6 +4,7 @@
 
 
 <div id="codesdiv">
+  <h3>Currency Codes</h3>
   <ul>
     {% for code in codes %}
     <li>{{code}} {{codes[code]}}</li>
@@ -12,11 +13,13 @@
 </div>
 
 <div id="converteddiv">
-  <p>{{from_symbol}}{{convert_amount}} {{convert_from}} to {{convert_to}} = {{to_symbol}}{{converted}}</p>
+  <p>{{convert_from}} <i class="fas fa-exchange-alt"></i> {{convert_to}}</p>
+  <p>{{from_symbol}}{{convert_amount}} = {{to_symbol}}{{converted}}</p>
   <a href="/"><button>Home</button></a>
 </div>
 
 <div id="ratesdiv">
+  <h3>{{convert_from}} Conversion Rates</h3>
   <ul>
     {% for rate in rates %}
     <li>{{rate}} {{rates[rate]|round(2)}}</li>
