@@ -5,7 +5,6 @@ c = CurrencyRates()
 code = CurrencyCodes()
 
 
-
 def convert_currency(start, end, amount):
     """Convert given currencies and amount"""
     get_converted = c.convert(start, end, Decimal(amount))
@@ -23,6 +22,3 @@ def get_rates(curr_code):
     """Get all conversion rates for a given currency code"""
     rates = c.get_rates(curr_code)
     return rates
-
-
-

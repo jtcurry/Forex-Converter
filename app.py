@@ -42,5 +42,5 @@ def convert():
         flash("Invalid Currency Code")
         return render_template("index.html", codes=codes)
     except InvalidOperation:
-        flash("Invalid Currency Amount")  
+        flash("Invalid Currency Amount")
         return render_template("index.html", codes=codes)
