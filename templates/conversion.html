@@ -18,14 +18,15 @@
   <a href="/"><button>Home</button></a>
 </div>
 
-<div id="ratesdiv">
+<footer id="ratesdiv">
   <h3>{{convert_from}} Conversion Rates</h3>
-  <ul>
+  <marquee behavior="scroll" class="scrollcontainer">
     {% for rate in rates %}
-    <li>{{rate}} {{rates[rate]|round(2)}}</li>
+    <p>{{rate}} {{rates[rate]|round(2)}}</p>
     {% endfor %}
-  </ul>
-</div>
+  </marquee>
+</footer>
+
 
 
 {% endblock %}

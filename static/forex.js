@@ -29,7 +29,3 @@ inputContainer.addEventListener("click", function(event) {
 })
 
 
-
-
-
-
