@@ -6,6 +6,7 @@
 
 <div id="codesdiv">
   <h3>Select Currency</h3>
+  <hr>
   <ul id="codelist">
     {% for code in codes %}
     <li>{{code}} {{codes[code]}}</li>
@@ -14,29 +15,36 @@
 </div>
 
 <div id="converterdiv">
+  <h3>Convert Currency</h3>
+  <hr>
   <form action="/convert">
-    <h2>Convert Currency</h2>
-    <div class="input-container">
-      <label for="from">Convert From</label>
-      <input type="text" name="from" id="convertfrom" placeholder="Enter Code" required>
-      <i class="far fa-trash-alt"></i>
+
+
+    <div class="convertwrapper">
+      <div class="input-container">
+        <label for="from">From </label>
+        <input type="text" name="from" id="convertfrom" placeholder="Enter Code" required>
+        <i class="far fa-trash-alt"></i>
+      </div>
+      <div class="input-container">
+        <label for="to">To </label>
+        <input type="text" name="to" id="convertto" placeholder="Enter Code" required>
+        <i class="far fa-trash-alt"></i>
+      </div>
+      <div class="input-container">
+        <label for="amount">Amount </label>
+        <input type="text" name="amount" id="convertamount" placeholder="0.00" required>
+      </div>
+
     </div>
-    <div class="input-container">
-      <label for="to">Convert To</label>
-      <input type="text" name="to" id="convertto" placeholder="Enter Code" required>
-      <i class="far fa-trash-alt"></i>
-    </div>
-    <div class="input-container">
-      <label for="amount">Amount</label>
-      <input type="text" name="amount" id="convertamount" placeholder="0.00" required>
-    </div>
-    <button>Convert</button>
+    <button><i class="fas fa-exchange-alt"></i></button>
+
   </form>
 </div>
 
 <div id="errordiv">
-  {% for msg in get_flashed_messages() %}
-  <p>{{msg}}</p>
+  {% for category, msg in get_flashed_messages(with_categories=true) %}
+  <p class={{category}}>{{msg}}</p>
   {% endfor %}
 </div>
 

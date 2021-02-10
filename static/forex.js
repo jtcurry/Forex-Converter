@@ -15,17 +15,15 @@ const fillEmpty = (code) => {
 };
 
 
-codeList.addEventListener("click", function(event) {
+codeList.addEventListener("click", function (event) {
   if (event.target.tagName === "LI") {
     let code = event.target.textContent.substring(0, 3);
     fillEmpty(code);
   }
 });
 
-inputContainer.addEventListener("click", function(event) {
+inputContainer.addEventListener("click", function (event) {
   if (event.target.tagName === "I") {
     event.target.previousElementSibling.value = "";
   }
-})
-
-
+});

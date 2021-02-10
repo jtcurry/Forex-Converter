@@ -7,14 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Roboto&display=swap" rel="stylesheet">
   <title>Forex Converter</title>
 </head>
 
 <body>
-  <h1>Forex Converter</h1>
+  <div class="overlay"></div>
+  <div id="titlediv">
+    <a href="/">
+      <h1>Forex Converter</h1>
+    </a><i class="fas fa-coins"></i>
+  </div>
 
   {% block content %}
   {% endblock %}
+
+
+
   <script src="/static/forex.js"></script>
 
 </body>

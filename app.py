@@ -25,6 +25,8 @@ def convert():
     convert_amount = request.args["amount"]
 
     try:
+        if (check_pos_num(convert_amount) == False):
+            raise InvalidOperation
         converted = convert_currency(convert_from, convert_to, convert_amount)
         from_symbol = get_symbol(convert_from)
         to_symbol = get_symbol(convert_to)
@@ -39,8 +41,8 @@ def convert():
                                rates=rates,
                                codes=codes)
     except RatesNotAvailableError:
-        flash("Invalid Currency Code")
+        flash("Invalid Currency Code", "error")
         return render_template("index.html", codes=codes)
     except InvalidOperation:
-        flash("Invalid Currency Amount")
+        flash("Invalid Currency Amount", "error")
         return render_template("index.html", codes=codes)

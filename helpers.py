@@ -41,3 +41,10 @@ def sort_dict(test_dict):
         sorted_dict[k] = v
     return sorted_dict
 
+
+def check_pos_num(num):
+    """Check if a positive number was entered"""
+    if (float(num) <= 0):
+        return False
+    else:
+        return True
